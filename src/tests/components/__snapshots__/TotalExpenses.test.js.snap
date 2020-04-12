@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render a ExpenseListItem with multiple data  1`] = `
+<div>
+  <p>
+    Viewing 
+    45
+     
+    expenses
+     with the amount of 
+    1354
+  </p>
+  ;
+</div>
+`;
+
+exports[`Should render a totalExpenses with 1 data 1`] = `
+<div>
+  <p>
+    Viewing 
+    1
+     
+    expense
+     with the amount of 
+    0.5
+  </p>
+  ;
+</div>
+`;

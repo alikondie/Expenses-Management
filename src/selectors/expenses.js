@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 export default (expenses, { text, sortBy, startDate, endDate }) => {
-  console.log('this is the selector', expenses);
+  //console.log('this is the selector', expenses);
   return expenses
     .filter((expense) => {
       const createdAtMoment = moment(expense.createAt);
