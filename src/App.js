@@ -5,9 +5,11 @@ import configureStore from './store/configureStore';
 import 'normalize.css/normalize.css';
 import 'react-dates/lib/css/_datepicker.css';
 import 'react-dates/initialize';
-import './firebase/firebase';
-import AppRouter from './routers/AppRouter';
+import './firebase/firebase-db';
+import { firebase } from './firebase/firebase-auth';
+import AppRouter, { history } from './routers/AppRouter';
 import { startSetExpenses } from './actions/expenses';
+import { login, logout } from './actions/auth';
 const store = configureStore();
 /*
 store.dispatch(
@@ -30,8 +32,18 @@ const App = () => (
   </Provider>
 );
 
-store.dispatch(startSetExpenses()).then(() => {
-  console.log('fetched with success');
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // store.dispatch
+    store.dispatch(login(user.uid));
+    store.dispatch(startSetExpenses()).then(() => {
+      console.log('fetched with success');
+    });
+    if (history.location.pathname === '/') history.push('/dashboard');
+  } else {
+    store.dispatch(logout());
+    history.push('/');
+  }
 });
 
 console.log(store);
