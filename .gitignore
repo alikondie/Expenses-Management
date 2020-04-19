@@ -24,3 +24,7 @@ public/bundle.css.map
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#db_config
+
+firebase.js
