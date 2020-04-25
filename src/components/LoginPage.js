@@ -1,15 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { startLogin } from '../actions/auth';
-
+import { Button } from '../styles/components/LoginPage/Buttons';
+import { LoginWrapper } from '../styles/components/LoginPage/LoginWrapper';
+import { Box, Title, Text } from '../styles/components/LoginPage/Box';
 const LoginPage = ({ startLogin }) => {
   return (
-    <div>
-      <h1>Expense Management</h1>
-      <button onClick={startLogin} id='login'>
-        Login
-      </button>
-    </div>
+    <LoginWrapper>
+      <Box>
+        <Title>Expense Management</Title>
+        <Text>Manage your expenses with ease</Text>
+        <Button onClick={startLogin} id='login'>
+          Login with Google
+        </Button>
+      </Box>
+    </LoginWrapper>
   );
 };
 
