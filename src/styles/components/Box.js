@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import settings from '../../base/settings';
+import settings from '../base/settings';
 export const Box = styled.div`
   background-color: rgba(
     200,

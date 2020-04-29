@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import numeral from 'numeral';
 import moment from 'moment';
-
+import { Expense, Title, ExpenseLink, StyledLink } from './_ExpenseListItem';
 numeral.register('locale', 'fr', {
   delimiters: {
     thousands: ' ',
@@ -26,16 +26,15 @@ numeral.register('locale', 'fr', {
 numeral.locale('fr');
 
 export const ExpenseListItem = (props) => (
-  <div>
-    <Link to={`/edit/${props.id}`}>
-      <h3>{props.description}</h3>
-    </Link>
-
-    <p>
-      {numeral(props.amount).format('0,0[.]00€')} -{' '}
-      {moment(props.createAt).format('DD/MM/YYYY')}
-    </p>
-  </div>
+  <Expense>
+    <StyledLink to={`/edit/${props.id}`}>
+      <Title>{props.description}</Title>
+      <p>
+        {numeral(props.amount).format('0,0[.]00€')} -{' '}
+        {moment(props.createAt).format('DD/MM/YYYY')}
+      </p>
+    </StyledLink>
+  </Expense>
 );
 
 export default ExpenseListItem;

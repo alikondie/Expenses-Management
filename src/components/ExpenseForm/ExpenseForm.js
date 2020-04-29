@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
+import { Container, Wrapper, Button } from './_ExpenseForm';
 
 const now = moment();
 console.log(now.format('D MM YYYY'));
@@ -65,9 +66,9 @@ export default class ExpenseForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         {this.state.error && <p>{this.state.error}</p>}
-        <form onSubmit={this.onSubmit}>
+        <Wrapper onSubmit={this.onSubmit}>
           <input
             type='text'
             placeholder='Description'
@@ -94,9 +95,9 @@ export default class ExpenseForm extends React.Component {
             value={this.state.note}
             onChange={this.onNoteChange}
           ></textarea>
-          <button>Add Expense</button>
-        </form>
-      </div>
+          <Button>Add Expense</Button>
+        </Wrapper>
+      </Container>
     );
   }
 }

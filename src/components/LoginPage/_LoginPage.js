@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import colors from '../../base/colors';
 
-import bg from './bg.jpg';
+import bg from '../../styles/components/bg.jpg';
 
 export const LoginWrapper = styled.div`
   background-color: #cccccc; /* Used if the image is unavailable */ /* You must set a specified height */

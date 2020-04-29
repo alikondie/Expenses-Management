@@ -11,7 +11,7 @@ export const logout = () => ({
 
 export const startLogin = () => {
   return () => {
-    return firebase.auth().signInWithPopup(googleAuthProvider);
+    return firebase.auth().signInWithRedirect(googleAuthProvider);
   };
 };
 

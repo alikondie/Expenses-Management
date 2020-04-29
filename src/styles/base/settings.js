@@ -1,4 +1,5 @@
 const settings = {
+  xs_size: '0.6rem',
   s_size: '1.2rem',
   m_size: '1.6rem',
   l_size: '3.2rem',

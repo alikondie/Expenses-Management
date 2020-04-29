@@ -1,11 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ExpenseListItem from './ExpenseListItem';
-import selectExpenses from '../selectors/expenses';
-
+import ExpenseListItem from '../ExpenseListItem/ExpenseListItem';
+import selectExpenses from '../../selectors/expenses';
+import { Container } from '../../styles/components/Container';
+import { Title } from './_ExpenseList';
 export const ExpenseList = (props) => (
-  <div>
-    <h1>Expenses</h1>
+  <Container>
+    <Title>
+      <h1>Expenses</h1>
+    </Title>
     {props.expenses.length === 0 ? (
       <p>You don't have any expenses, add an expense to see them here :)</p>
     ) : (
@@ -13,7 +16,7 @@ export const ExpenseList = (props) => (
         return <ExpenseListItem key={expense.id} {...expense} />;
       })
     )}
-  </div>
+  </Container>
 );
 
 const mapStateToProps = (state) => {

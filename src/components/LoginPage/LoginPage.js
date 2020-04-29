@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { startLogin } from '../actions/auth';
-import { Button } from '../styles/components/LoginPage/Buttons';
-import { LoginWrapper } from '../styles/components/LoginPage/LoginWrapper';
-import { Box, Title, Text } from '../styles/components/LoginPage/Box';
+import { startLogin } from '../../actions/auth';
+import { Button } from '../../styles/components/Buttons';
+import { LoginWrapper } from './_LoginPage';
+import { Box, Title, Text } from '../../styles/components/Box';
 const LoginPage = ({ startLogin }) => {
   return (
     <LoginWrapper>

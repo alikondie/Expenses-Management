@@ -2,12 +2,12 @@ import React from 'react';
 import { Router, Route, Switch, Link, NavLink } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
-import ExpenseDashboardPage from './../components/ExpenseDashboard';
-import AddExpensePage from './../components/AddExpensePage';
-import EditExpensePage from './../components/EditExpensePage';
-import NotFoundPage from './../components/NotFound';
-import Header from './../components/Header';
-import Login from './../components/LoginPage';
+import ExpenseDashboardPage from './../components/ExpenseDashboard/ExpenseDashboard';
+import AddExpensePage from './../components/AddExpensePage/AddExpensePage';
+import EditExpensePage from './../components/EditExpensePage/EditExpensePage';
+import NotFoundPage from './../components/NotFound/NotFound';
+import Header from './../components/Header/Header';
+import Login from './../components/LoginPage/LoginPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 export const history = createHistory();
