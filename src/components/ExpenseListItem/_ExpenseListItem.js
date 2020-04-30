@@ -5,6 +5,7 @@ export { StyledLink } from '../../styles/components/Link';
 export const Expense = styled.div`
   border-style: solid;
   border-width: 1px;
+  color: black;
   border-color: rgba(205, 205, 205);
   max-width: 45rem;
   background: linear-gradient(90deg, rgba(255, 255, 255), rgba(245, 245, 245));
